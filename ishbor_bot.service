@@ -1,0 +1,12 @@
+[Unit]
+After=network.target
+Description=ishbor_bot
+
+[Service]
+Type=simple
+WorkingDirectory=/root/TGBOTS/ishbor_bot
+ExecStart=/root/TGBOTS/ishbor_bot/venv/bin/python3.10 app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
