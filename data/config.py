@@ -9,8 +9,7 @@ ADMINS = env.list("ADMINS")  # adminlar ro'yxati
 ADMINS_NAME = env.list("ADMINS_NAME")  # adminlar ro'yxati
 IP = env.str("ip")  # Xosting ip manzili
 CHANNELS = [
-    ['1 - Kanal','1661710972',"https://t.me/vakansiya_ishbor_nam"],
-    ['2 - Kanal','1611403981',"https://t.me/ishkerak_bor"]
+    ['1 - Kanal', '-1002006837720', "https://t.me/khodjayev_muzaffar"],
 ]
 
 

@@ -28,12 +28,13 @@ async def bot_start_handler(message: types.Message):
                 await bot.send_message(user, msg)
 
         except asyncpg.exceptions.UniqueViolationError:
-            await message.answer(f"Hurmatli Foydalanuvchi siz Bot ga a'zo bo'lgansiz bemalol foydalanishingiz mumkin.",
-                                      reply_markup=choose_job)
+            await message.answer(f"Assalomu alaykum, 𝙼𝚞𝚣𝚊𝚏𝚏𝚊𝚛! \nIshbor | Kerak Botiga xush kelibsiz",
+                                 reply_markup=choose_job)
     else:
         btn = await show_channels()
         context = f"Xurmatli {message.from_user.full_name} botni ishlatishdan oldin quyidagi kanallarga obuna bo'ling 👇"
         await message.answer(text=context,reply_markup=btn)
+
 
 @dp.message_handler()
 async def just_text(message: types.Message):
@@ -46,6 +47,7 @@ async def just_text(message: types.Message):
         btn = await show_channels()
         context = f"Xurmatli {message.from_user.full_name} botni ishlatishdan oldin quyidagi kanallarga obuna bo'ling 👇"
         await message.answer(text=context, reply_markup=btn)
+
 
 @dp.callback_query_handler(text='sub_channel_done')
 async def check_kanal(call: CallbackQuery):
